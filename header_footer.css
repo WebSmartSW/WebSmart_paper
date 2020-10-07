@@ -11,6 +11,12 @@ body {
     margin: 0;
 }
 
+object {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /*header*/
 .main_menu{
     background-color: white;
@@ -22,7 +28,22 @@ body {
     vertical-align: 10px;
 }
 
-.logo > p {
+.logo > a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.logo > a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.logo > a > p {
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
@@ -65,5 +86,4 @@ footer {
 .foot {
     color: white;
     background-color: #111;
-    padding-bottom: 15px;
 }

@@ -10,23 +10,9 @@
     <script src="./includeHtml.js"></script>
     <title>스마트경진대회</title>
 </head>
-<body onload="buildCalendar(); includeHTML();">
-    <!-- header -->
-    <div class="ui_container">
-        <header class="col-12 main_menu">
-            <div class="col-3 logo" onclick="location.href='main.html'" style="cursor:pointer;">
-                <img src="img/logo.png" style="width:100px " alt="logo image">
-                <p>스마트시스템소프트웨어학과<br>스마트시스템경진대회</p>
-            </div>
-            <ul class="col-8 navi_bar">
-                <li><a href="#행사안내">행사안내</a></li>
-                <li><a href="#참가등록">참가등록</a></li>
-                <li><a href="#신청현황">신청현황</a></li>
-                <li><a href="#공지사항">공지사항</a></li>
-                <li><a href="#자주묻는질문">자주묻는질문</a></li>
-            </ul>
-        </header>
-    </div>
+<body onload="buildCalendar(); htmlInclude();">
+    
+    <div id="header" class="ui_container"></div>
     <hr>
     <!-- body -->
     <div class="ui_container" style="padding-top: 0; padding-bottom: 0.5em">
@@ -96,10 +82,10 @@
             </div>
         </div>
     </div>
-    
-    <div include-html="footer.html"></div>
+
+    <footer id="footer" class="foot"></footer>
     <script>
-    includeHtml.includeHTML();
+        htmlInclude();
     </script>
 </body>
 </html>
