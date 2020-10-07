@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="grid.css">
+    <script src="./calendar.js"></script>
     <title>스마트경진대회</title>
 </head>
-<body>
+<body onload="buildCalendar();">
     <!-- header -->
     <div class="ui_container">
         <header class="col-12 main_menu">
@@ -32,18 +33,70 @@
             <img src="./img/main_img.png" alt="main image" class="main_img">
             <div class="main_overlay">
                 <h1>스마트 시스템 경진대회</h1>
+                <h3>11월 6일(금) 오후 1시, 백마관</h3>
             </div>
         </div>
         <!-- body contents -->
         <div class="col-2 main_contents">
-            <div class="contents_item"><p>asdfasd</p></div>
-            <div class="contents_item"><p>sdf</p></div>
-            <div class="contents_item"><div class="calendar"></div></div>
+            <!-- 바로가기 -->
+            <div class="contents_item">
+                <div>
+                    <h1>바로가기 링크</h>
+                </div>
+                <hr>
+                <!-- 학교 -->
+                <div class="link_img_con" onclick="location.href='http://smartsw.ssu.ac.kr/'" style="cursor:pointer;">
+                    <img src="./img/light_red.png" class="link_img">
+                    <div class="link_text">
+                        <p>학과</p>
+                    </div>
+                </div>
+                <!-- 학과 -->
+                <div class="link_img_con" onclick="location.href='https://ssu.ac.kr/'" style="cursor:pointer;">
+                    <img src="./img/light_blue.png" class="link_img">
+                    <div class="link_text">
+                        <p>학교</p>
+                    </div>
+                </div>
+                <!-- 미정 -->
+                <div class="link_img_con" onclick="location.href='###'" style="cursor:pointer;">
+                    <img src="./img/light_green.png" class="link_img">
+                    <div class="link_text">
+                        <p>외부</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 신청현황 -->
+            <div class="contents_item">
+                <p>sdf</p>            
+            </div>
+
+            <!-- 달력 -->
+            <div class="contents_item">
+                <table id="calendar">
+                    <tr>
+                        <td><label onclick="prevCalendar()"><</label></td>
+                        <td id="tbCalendarYM" colspan="5">
+                        yyyy년 m월</td>
+                        <td><label onclick="nextCalendar()">></label></td>
+                    </tr>
+                    <tr>
+                        <td><font color ="#ff0000">일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td><font color ="#0000ff">토</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <!-- footer -->
     <footer class="foot">
-        <div class="ui_container">
+        <div class="ui_container" style="text-align: left;">
             <p>숭실대학교 스마트시스템소프트웨어학과<br>(156-743)서울시 동작구 상도로 369 형남공학관 424호 (학과사무실)<br>
             전화: 02-820-0950<br>이메일: smartsystem@soongsil.ac.kr</p>
         </div>
