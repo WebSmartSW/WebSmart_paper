@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="grid.css">
     <script src="./calendar.js"></script>
+    <script src="./includeHtml.js"></script>
     <title>스마트경진대회</title>
 </head>
-<body onload="buildCalendar();">
+<body onload="buildCalendar(); includeHTML();">
     <!-- header -->
     <div class="ui_container">
         <header class="col-12 main_menu">
@@ -94,12 +96,10 @@
             </div>
         </div>
     </div>
-    <!-- footer -->
-    <footer class="foot">
-        <div class="ui_container" style="text-align: left;">
-            <p>숭실대학교 스마트시스템소프트웨어학과<br>(156-743)서울시 동작구 상도로 369 형남공학관 424호 (학과사무실)<br>
-            전화: 02-820-0950<br>이메일: smartsystem@soongsil.ac.kr</p>
-        </div>
-    </footer>
+    
+    <div include-html="footer.html"></div>
+    <script>
+    includeHtml.includeHTML();
+    </script>
 </body>
 </html>

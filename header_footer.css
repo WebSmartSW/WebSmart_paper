@@ -1,0 +1,69 @@
+/*general*/
+.ui_container{
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+/*header*/
+.main_menu{
+    background-color: white;
+    top: 0;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: 10px;
+}
+
+.logo > p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: 35px;
+}
+
+.navi_bar {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    height: 125px;
+    line-height: 80px;
+}
+
+.navi_bar > li {
+    display: inline-block;
+    zoom: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+}
+
+.navi_bar > li  > a { 
+    font-weight: bold;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 27px;
+}
+
+/*footer*/
+footer {
+    margin-bottom: 0;
+}
+.foot {
+    color: white;
+    background-color: #111;
+    padding-bottom: 15px;
+}
