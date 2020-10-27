@@ -1,0 +1,23 @@
+.info {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info_pic {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+
+.greeting {
+    width: 100%;
+}
+
+.info_text {
+    margin-left: 1em;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1.1em;
+}
