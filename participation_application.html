@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="participation.css">
     <link rel="stylesheet" href="grid.css">
-    <link rel="javascript" href="post_data.js">
+   
     <title>Participation</title>
 </head>
 <body>
@@ -31,6 +31,23 @@
             <h4>참가신청</h4>
             <p style="margin-right:auto;">홈 > 참가등록 > 참가신청</p>
             <h4 sytle="text-align= center">참가 신청서</h4>
+            <script>
+                function sendPost(action, params) {
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', action);
+                    document.charset = "utf-8";
+                    for ( var key in params) {
+                        var hiddenField = document.createElement('input');
+                        hiddenField.setAttribute('type', 'hidden');
+                        hiddenField.setAttribute('name', key);
+                        hiddenField.setAttribute('value', params[key]);
+                        form.appendChild(hiddenField);
+                    }
+                    document.body.appendChild(form);
+                    form.submit();            
+                }
+            </script>
             <table>
                 <tr style="border-bottom: 3px solid skyblue;"> 
                     <th>
@@ -63,7 +80,7 @@
                            </tr>
                            <tr>
                                <th>
-                                    <input type="button" value="항목추가" onclick=""><br>
+                                    <input type="button" value="항목추가"  ><br>
                                </th>
                            </tr>
                        </table>
@@ -82,10 +99,12 @@
                     </th>
                 </tr>
             </table>
+          
             
-            <input type="button" value="참가신청" onclick="sendPost()" ><br>
-
+            <input type="submit" value="참가신청" onclick='sendPost("localhost:3000", "leaderName", "leaderPhone")' ><br>
         </div>
+   
+
         <div class="paticipation_side">
             <table style="border-left: 3px solid skyblue; border-right: 3px solid skyblue;">
                 <tr>
@@ -110,5 +129,6 @@
         </div>
     </footer>
 
+   
 </body>
 </html>
