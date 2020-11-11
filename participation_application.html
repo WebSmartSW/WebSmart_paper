@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="participation.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="javascript" href="post_data.js">
     <title>Participation</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
                 <tr style="border-bottom: 3px solid skyblue;"> 
                     <th>
                         <label for="작품제목:">작품제목: &nbsp;&nbsp;</label>
-                        <input type="text" name="작품제목" id="제목:">
+                        <input type="text" name="title" id="title">
                     </th>
                 </tr>
                 <tr style="border-bottom: 3px solid skyblue;">
@@ -44,25 +45,25 @@
                            <tr>
                                <td>
                                     <label for="팀장:">팀장: &nbsp;&nbsp;</label>
-                                    <input type="text" name="팀장" id="팀장:">
+                                    <input type="text" name="leaderName" id="leaderName">
                                </td>
                               
                            </tr>
                            <tr>
                                 <td>
                                     <label for="팀원:">팀원: &nbsp;&nbsp;</label>
-                                    <input type="text" name="팀원0" id="팀원0:">
+                                    <input type="text" name="memberName1" id="memberName1:">
                                 </td>
                            </tr>
                            <tr>
                                 <td>
                                     <label for="팀원:">팀원: &nbsp;&nbsp;</label>
-                                    <input type="text" name="팀원1" id="팀원1:">
+                                    <input type="text" name="memberName2" id="memberName2">
                                 </td>
                            </tr>
                            <tr>
                                <th>
-                                    <input type="button" value="항목추가 "><br>
+                                    <input type="button" value="항목추가" onclick=""><br>
                                </th>
                            </tr>
                        </table>
@@ -77,12 +78,12 @@
                 <tr sytle="border-bottom:3px solid skyblue;">
                     <th>
                         <label for="팀장연락처:">팀장연락처: &nbsp;&nbsp;</label>
-                        <input type="text" name="팀장연락처" id="팀장연락처:">
+                        <input type="text" name="leaderPhone" id="leaderPhone">
                     </th>
                 </tr>
             </table>
             
-            <input type="button" value="참가신청 "><br>
+            <input type="button" value="참가신청" onclick="sendPost()" ><br>
 
         </div>
         <div class="paticipation_side">
