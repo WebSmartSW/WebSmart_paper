@@ -1,0 +1,53 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.logo:link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.logo:active {
+  color: white;
+  text-decoration: none;
+}
+
+.jumbotron-bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.jumbotron-bg::before {
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000;
+  z-index: -1;
+}
+
+.side_menu {
+  min-height: 250px;
+}
+
+object {
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
