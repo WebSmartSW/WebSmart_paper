@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>2020 스마트 경진대회</title>
+  <title>참가 신청</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -11,15 +11,14 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/part.css">
   <link rel="stylesheet" href="css/header_footer.css">
   <link rel=" shortcut icon" href="img/smart.ico">
   <link rel="icon" href="img/smart.ico">
-  <script src="js/calendar.js"></script>
   <script src="js/includeHtml.js"></script>
 
 </head>
-<body class="m-0" onload="buildCalendar(); htmlInclude();">
+<body class="m-0" style="overflow-x: hidden" onload="htmlInclude();">
 
   <!-- 비활성화 header 
   <div id="header"></div> -->
@@ -47,7 +46,7 @@
                 <a class="nav-link" href="info.html" target="_top">행사안내</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="particification.html" target="_top">참가등록</a>
+                <a class="nav-link active" href="#" target="_top">참가등록</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" target="_top">신청현황</a>
@@ -59,74 +58,57 @@
     </div>
   </div>
 </nav>
-<!--header 끝, main 시작-->
-  <div class="container-fluid">
-    <div class="row">
-      <!--메인 슬라이드-->
-      <div id="mainSlide" class="carousel slide col-lg-9 mb-1" data-ride="carousel">
-
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#mainSlide" data-slide-to="0" class="active"></li>
-          <li data-target="#mainSlide" data-slide-to="1"></li>
-          <li data-target="#mainSlide" data-slide-to="2"></li>
-        </ul>
-
-        <!-- The slideshow -->
-        <div class="carousel-inner rounded-lg">
-          <div class="carousel-item active">
-            <img src="img/main_img.png" alt="slide 1">
-          </div>
-          <div class="carousel-item">
-            <img src="img/main_img2.png" alt="slide 2">
-          </div>
-          <div class="carousel-item">
-            <img src="img/main_img3.png" alt="slide 3">
-          </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#mainSlide" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#mainSlide" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
+<!-- body -->
+  <div class="container-fluid text-info">
+    <h2> 참가신청</h2>
+  </div>
+  <div class="container">
+    <form action='/create' method='post'>
+      <div class="form-group">
+        <label for="작품 제목:">작품 제목:</label>
+        <input type="text" class="form-control" name="title" placeholder="작품 제목을 입력하세요" id="제목:">
       </div>
 
-      <!--사이드-->
-      <aside class="col-lg-3">
-        <!--바로가기-->
-        <div class="border border-2 border-secondary mb-3 h-32 side_menu" style="text-align: center">
-          <div class="btn-group-vertical w-75 my-5" style="display: inline-block">
-            <a href="#" class="btn btn-info btn-lg btn-block mb-3">학교 홈페이지</a>
-            <a href="#" class="btn btn-info btn-lg btn-block">학과 홈페이지</a>
-          </div>
+      <h4 style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">참여학생 인적사항</h4>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀장</span>
         </div>
-        <div class="border border-2 border-secondary mb-3 h-32 side_menu">
+        <input type="text" class="form-control" placeholder="팀장 이름" name="team_leader_name">
+        <input type="text" class="form-control" placeholder="팀장 학번" name="team_leader_id">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀원</span>
         </div>
-        <!--달력-->
-        <div class="border border-2 border-secondary h-32 side_menu">
-          <table id="calendar" class="m-auto">
-            <tr>
-                <td><label onclick="prevCalendar()"><</label></td>
-                <td id="tbCalendarYM" colspan="5">
-                yyyy년 m월</td>
-                <td><label onclick="nextCalendar()">></label></td>
-            </tr>
-            <tr>
-                <td><font color ="#ff0000">일</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td><font color ="#0000ff">토</td>
-            </tr>
-          </table>
+        <input type="text" class="form-control" placeholder="팀원 이름" name="team_0_name">
+        <input type="text" class="form-control" placeholder="팀원 학번" name="team_0_id">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀원</span>
         </div>
-      </aside>
-    </div>
+        <input type="text" class="form-control" placeholder="팀원 이름" name="team_1_name">
+        <input type="text" class="form-control" placeholder="팀원 학번" name="team_1_id">
+      </div>
+
+      <button type="submit" class="btn btn-warning">인원 추가</button>
+
+      <div class="form-group">
+        <label for="작품 개요:">작품 개요:</label>
+        <textarea class="form-control" rows="5" placeholder="200자 이내로 작성하세요." name="description"></textarea>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀장 연락처</span>
+        </div>
+        <input type="text" class="form-control" placeholder="팀장 핸드폰 번호" name="team_leader_phone">
+        <input type="text" class="form-control" placeholder="팀원 이메일" name="team_leader_mail">
+      </div>
+
+      <button type="submit" class="btn btn-info">참가신청</button>
+    </form>
   </div>
 
   <!--비활성화 css/header_footer.css
@@ -138,8 +120,6 @@
         전화: 02-820-0950<br>이메일: smartsystem@soongsil.ac.kr</p>
     </div>
   </div>
-  <script>
-    //htmlInclude();
-  </script>
+
 </body>
 </html>
