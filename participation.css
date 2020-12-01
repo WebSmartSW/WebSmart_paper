@@ -4,6 +4,7 @@
     max-width: 1600px;
     margin: auto;
     padding-top: 15px;
+    /* border: 3px solid red; */
 }
 
 body {
@@ -96,6 +97,7 @@ body {
     display: inline-block;
     padding-left: 0.5em;
     height: 732px;
+    border: 3px solid black;
 }
 
 .contents_item {
@@ -103,30 +105,77 @@ body {
     padding: 0;
     margin: 0;
 }
-.paticipation_main{
-    float:right;
-    width: 100%;
-    margin-top:50px;
+.contents{
+    display: flex;
+    border:3px solid black;
+    flex-direction: column-reverse;
+}
+.paticipation{
+    /* float:right; */
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1800px;
+    /* margin-top:50px;
     margin-left:-300px;
-    padding-left: 300px;
+    padding-left: 300px; */
     box-sizing: border-box;
+    /* border: 3px solid orange; */
+
+}
+.title{
+    display: flex;
+    /* border: 3px solid orange; */
+    font-weight: bold;
+    font-size: larger;
+}
+.last{
+    display: flex;
+    border: 3px solid red;
+
+}
+.root{
+    display: flex;
+    /* border: 3px solid orange; */
+}
+.formatTitle{
+    display: flex;
+    /* border: 3px solid rgb(177, 173, 166); */
+}
+.paticipation_main{
+    /* float:right; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* margin-top:50px;
+    margin-left:-300px;
+    padding-left: 300px; */
+    box-sizing: border-box;
+    border: 3px solid green;
+    
 }
 .paticipation_side{
-    float : left;
-    margin-top:50px;
-    width:300px;
+    /* float : left; */
+    display: flex;
+    /* margin-top:50px;
+    width:300px; */
+    width:200px;
+    border: 3px solid blue;
+    justify-content:center;
 }
 
 /*footer*/
 footer {
     margin:auto;
     margin-bottom: 0;
-   
+    border: 3px solid purple;
 }
 .foot {
     color: white;
     background-color: #111;
     padding-bottom: 15px;
+    border: 3px solid purple;
+    margin:5px;
+    display: flex;
 }
 
 
