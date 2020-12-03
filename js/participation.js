@@ -1,4 +1,4 @@
-
+let NumberOfNumber = 1;
 function applyForm(){
     console.log("hello")
     console.log(document.getElementById("title"))
@@ -25,5 +25,29 @@ function applyForm(){
     }) 
     console.log(res)
 
+
+}
+function addMember(){
+    
+    console.log(NumberOfNumber)
+    
+        memberForms(NumberOfNumber)
+        NumberOfNumber++;
+
+}
+
+function memberForms(NumberOfNumber){
+    
+    let index = Number(NumberOfNumber)
+    let member =
+    ` <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀원</span>
+        </div>
+        <input type="text" class="form-control" placeholder="팀원 이름" name="memberName" id=${index}>
+        <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=${index}>
+      </div> `
+      document.getElementById("member").innerHTML += member ;
+      console.log(document.getElementById(index))
 
 }
