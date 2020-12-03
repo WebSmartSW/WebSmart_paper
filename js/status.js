@@ -5,11 +5,21 @@ var columnDefs = [
     {headerName: "주제", field: "title",sortable:true,filter: true},
     {headerName: "작품 설명", field: "description",sortable:true,filter: true},
     {headerName: "팀장", field: "leaderName",sortable:true,filter: true},
-    {headerName: "팀원", field: "description",sortable:true,filter: true}
+    {headerName: "팀원", field: "members",sortable:true,filter: true}
   ];
  
   var rowData = getTaem();
-  console.log(rowData)
+  let temp = rowData.map(v=>v.members);
+  
+  for(let i = 0; i<temp.length;i++)
+  {
+  
+   // members.push(JSON.parse(temp[i]))
+    let members =(JSON.parse(temp[i]).map(v=>v.name)).toString();
+    rowData[i].members = members;
+  }
+ 
+
 
 function getTaem(){
     let data

@@ -14,13 +14,15 @@ function applyForm(){
    let email = document.getElementById("email").value;
    //console.log(description,title,leaderName,ledaerId,teamName,phone,email)
    let res;
+   console.log(JSON.stringify({description:description,title:title||null,leaderName:leaderName,leaderId:Number(leaderId),
+    teamName:teamName,phone:phone,email:email,members:JSON.stringify(members)}))
    $.ajax({
     type: "post",
     url: 'http://localhost:7000/admin/apply',
      datatype: 'json',
      contentType: "application/json; charset=utf-8",
     data:JSON.stringify({description:description,title:title||null,leaderName:leaderName,leaderId:Number(leaderId),
-        teamName:teamName,phone:phone,email:email,members:members}),
+        teamName:teamName,phone:phone,email:email,members:JSON.stringify(members)}),
    success: function(data){
     res = data.length
      console.log(data)

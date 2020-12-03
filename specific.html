@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/participation.js"></script>
+  <script src="js/specific.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/part.css">
@@ -71,7 +71,7 @@
       </div>
       
     <div id = "member"></div>
-      <div id="temp">
+      <!-- <div id="temp">
       <div class="input-group mb-3" name ="temp">
         <div class="input-group-prepend">
           <span class="input-group-text bg-secondary text-white">팀원</span>
@@ -80,7 +80,8 @@
         <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=0>
       </div>
     
-  </div>
+  </div> -->
+  <script>fetchTeamMates()</script>
 
       <!-- <button type="button" class="btn btn-warning" onclick="addMember()">인원 추가</button> -->
 
@@ -105,6 +106,7 @@
     <!-- <input type="submit" class="btn btn-info" onclick="applyForm()" ></input> -->
     </form>
   </div>
+  <script>fetchData()</script>
 
   <!--footer-->
   <div class="bg-dark text-white mt-3">
