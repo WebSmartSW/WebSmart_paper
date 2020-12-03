@@ -42,6 +42,10 @@ onGridReady: function (params) {
     });
   });
 },
+onCellClicked: function onCellClicked(event) {
+  console.log('onCellClicked: ' + (event.data.id));
+  window.location.href = `specific.html?id=${event.data.id}`;
+}
 };
 document.addEventListener('DOMContentLoaded', function () {
   var eGridDiv = document.querySelector('#myGrid');
