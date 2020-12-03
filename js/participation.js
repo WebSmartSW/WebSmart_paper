@@ -1,4 +1,4 @@
-let NumberOfNumber = 1;
+let members=[];
 function applyForm(){
     console.log("hello")
     console.log(document.getElementById("title"))
@@ -28,26 +28,36 @@ function applyForm(){
 
 }
 function addMember(){
-    
-    console.log(NumberOfNumber)
-    
-        memberForms(NumberOfNumber)
-        NumberOfNumber++;
+    let member={
+        name:"",
+        id:""
+    };
+    members.push(member)
+    var header = document.querySelector("#temp");	//제거하고자 하는 엘리먼트
+    header.parentNode.removeChild(header); 
+    console.log(document.getElementById("member"))
+ console.log(members.length)
+ document.getElementById("member").innerHTML="" ;
+    members.map((member,index)=>{
+        memberForms(member,index);
+    })
+       
+      
 
 }
 
-function memberForms(NumberOfNumber){
+function memberForms(member,index){
     
-    let index = Number(NumberOfNumber)
-    let member =
-    ` <div class="input-group mb-3">
+    console.log(member)
+    let memberForm =
+    `   <div id="temp"><div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text bg-secondary text-white">팀원</span>
         </div>
-        <input type="text" class="form-control" placeholder="팀원 이름" name="memberName" id=${index}>
-        <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=${index}>
-      </div> `
-      document.getElementById("member").innerHTML += member ;
+        <input type="text" class="form-control" placeholder="팀원 이름" name="memberName" id=${index} value=${member.name}>
+        <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=${index} value=${member.id}>
+      </div> </div>`
+      document.getElementById("member").innerHTML += memberForm ;
       console.log(document.getElementById(index))
 
 }
