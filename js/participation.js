@@ -14,6 +14,14 @@ function applyForm(){
    let email = document.getElementById("email").value;
    //console.log(description,title,leaderName,ledaerId,teamName,phone,email)
    let res;
+   let NumberOfMember = (members.length)-1;
+   let memberNameList = document.getElementsByName("memberName");
+   let memberIdList = document.getElementsByName("memberId");
+
+  let name = memberNameList[NumberOfMember].value;
+  let id = memberIdList[NumberOfMember].value;
+  
+  members[NumberOfMember]={name:name,id:id};
    console.log(JSON.stringify({description:description,title:title||null,leaderName:leaderName,leaderId:Number(leaderId),
     teamName:teamName,phone:phone,email:email,members:JSON.stringify(members)}))
    $.ajax({
