@@ -1,4 +1,7 @@
-let members=[];
+let members=[{
+    name:"",
+    id:""
+}];
 function applyForm(){
     console.log("hello")
     console.log(document.getElementById("title"))
@@ -28,13 +31,23 @@ function applyForm(){
 
 }
 function addMember(){
+    let NumberOfMember = (members.length)-1;
+    let memberNameList = document.getElementsByName("memberName");
+    let memberIdList = document.getElementsByName("memberId");
+    console.log(members,NumberOfMember,memberNameList)
+   let name = memberNameList[NumberOfMember].value;
+   let id = memberIdList[NumberOfMember].value;
+   console.log(name,id)
+   members[NumberOfMember]={name:name,id:id};
+  console.log(members)
     let member={
         name:"",
         id:""
     };
     members.push(member)
-    var header = document.querySelector("#temp");	//제거하고자 하는 엘리먼트
+    let header = document.querySelector("#temp");	//제거하고자 하는 엘리먼트
     header.parentNode.removeChild(header); 
+    console.log(members)
     console.log(document.getElementById("member"))
  console.log(members.length)
  document.getElementById("member").innerHTML="" ;
