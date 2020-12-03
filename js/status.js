@@ -2,9 +2,11 @@ function table(){
 var columnDefs = [
   {headerName: "#", field: "index",sortable:true,filter: true},
     {headerName: "팀 이름", field: "teamName",sortable:true,filter: true},
-    {headerName: "팀장", field: "leaderName",sortable:true,filter: true},
+   
     {headerName: "주제", field: "title",sortable:true,filter: true},
-    {headerName: "팀 설명", field: "description",sortable:true,filter: true}
+    {headerName: "작품 설명", field: "description",sortable:true,filter: true},
+    {headerName: "팀장", field: "leaderName",sortable:true,filter: true},
+    {headerName: "팀원", field: "description",sortable:true,filter: true}
   ];
 
       

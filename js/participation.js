@@ -20,7 +20,7 @@ function applyForm(){
      datatype: 'json',
      contentType: "application/json; charset=utf-8",
     data:JSON.stringify({description:description,title:title||null,leaderName:leaderName,leaderId:Number(leaderId),
-        teamName:teamName,phone:phone,email:email}),
+        teamName:teamName,phone:phone,email:email,members:members}),
    success: function(data){
     res = data.length
      console.log(data)
@@ -34,23 +34,22 @@ function addMember(){
     let NumberOfMember = (members.length)-1;
     let memberNameList = document.getElementsByName("memberName");
     let memberIdList = document.getElementsByName("memberId");
-    console.log(members,NumberOfMember,memberNameList)
+
    let name = memberNameList[NumberOfMember].value;
    let id = memberIdList[NumberOfMember].value;
-   console.log(name,id)
+   
    members[NumberOfMember]={name:name,id:id};
-  console.log(members)
+    
     let member={
         name:"",
         id:""
     };
     members.push(member)
+   
     let header = document.querySelector("#temp");	//제거하고자 하는 엘리먼트
     header.parentNode.removeChild(header); 
-    console.log(members)
-    console.log(document.getElementById("member"))
- console.log(members.length)
- document.getElementById("member").innerHTML="" ;
+    document.getElementById("member").innerHTML="" ;
+
     members.map((member,index)=>{
         memberForms(member,index);
     })
