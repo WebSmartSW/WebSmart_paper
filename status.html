@@ -15,16 +15,12 @@
   <link rel="stylesheet" href="css/header_footer.css">
   <link rel=" shortcut icon" href="img/smart.ico">
   <link rel="icon" href="img/smart.ico">
-  <script src="js/includeHtml.js"></script>
   <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
   <script src="js/main.js"></script>
 </head>
-<body class="m-0" style="overflow-x: hidden" onload="htmlInclude();">
+<body class="m-0" style="overflow-x: hidden">
 
-  <!-- 비활성화 header 
-  <div id="header"></div> -->
-
-  <!-- 임시 사용 header -->
+  <!--header -->
 <div class="jumbotron text-center mb-2 jumbotron-bg" style="background-image: url(img/jumbotron.png);">
   <a href="index.html" target="_top" class="logo">
     <img src="img/logo.png" style="width:150px " alt="logo image">
@@ -52,9 +48,6 @@
             <li class="nav-item">
                 <a class="nav-link active" href="#" target="_top">신청현황</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" target="_top">공지사항</a>
-            </li>
         </ul>
     </div>
   </div>
@@ -64,47 +57,13 @@
   <h2> 신청현황</h2>
 </div>
 <div class="container">
+<!-- 총 신청 수 -->
 <h2 style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">총 신청: 2</h2>
-<!-- <table class="table table-hover">
-    <thead class = "thead-dark">
-    <tr>
-      <th>No.</th>
-      <th>팀 이름</th>
-      <th>팀장</th>
-      <th>주제</th>
-      <th>등록 일자</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>웹 프로그래밍</td>
-      <td>이진석</td>
-      <td>스시소 경진대회</td>
-      <td>2020-11-30</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>IOT 프로그래밍</td>
-      <td>이진수</td>
-      <td>라즈베리파이로 연주하기</td>
-      <td>2020-11-30</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>마이크로프로세서 응용</td>
-      <td>이해인</td>
-      <td>베릴로그를 통한 AXI BUS 구현</td>
-      <td>2020-11-30</td>
-    </tr>
-  </tbody>
-</table> -->
+<!-- 신청현황 표-->
 <div id="myGrid" style="height: 200px; width:1000px;" class="ag-theme-alpine"></div>
 </div>
 
-<!--비활성화 css/header_footer.css
-<div id="footer" class="fixed-bottom"></div>-->
-<!--임시사용 footer-->
+<!--footer-->
 <div class="bg-dark text-white mt-3">
   <div class="container-fluid py-3">
     <p class="mb-0">숭실대학교 스마트시스템소프트웨어학과<br>(156-743)서울시 동작구 상도로 369 형남공학관 424호 (학과사무실)<br>

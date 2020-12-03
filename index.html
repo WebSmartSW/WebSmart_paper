@@ -16,15 +16,11 @@
   <link rel=" shortcut icon" href="img/smart.ico">
   <link rel="icon" href="img/smart.ico">
   <script src="js/calendar.js"></script>
-  <script src="js/includeHtml.js"></script>
 
 </head>
-<body class="m-0" onload="buildCalendar(); htmlInclude();">
+<body class="m-0" onload="buildCalendar();">
 
-  <!-- 비활성화 header 
-  <div id="header"></div> -->
-
-  <!-- 임시 사용 header -->
+  <!--header -->
 <div class="jumbotron text-center mb-2 jumbotron-bg" style="background-image: url(img/jumbotron.png);">
   <a href="index.html" target="_top" class="logo">
     <img src="img/logo.png" style="width:150px " alt="logo image">
@@ -51,9 +47,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="status.html" target="_top">신청현황</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" target="_top">공지사항</a>
             </li>
         </ul>
     </div>
@@ -99,11 +92,15 @@
         <!--바로가기-->
         <div class="border border-2 border-secondary mb-3 h-32 side_menu" style="text-align: center">
           <div class="btn-group-vertical w-75 my-5" style="display: inline-block">
-            <a href="#" class="btn btn-info btn-lg btn-block mb-3">학교 홈페이지</a>
-            <a href="#" class="btn btn-info btn-lg btn-block">학과 홈페이지</a>
+            <a href="https://ssu.ac.kr/" class="btn btn-info btn-lg btn-block mb-3">학교 홈페이지</a>
+            <a href="http://smartsw.ssu.ac.kr/" class="btn btn-info btn-lg btn-block">학과 홈페이지</a>
           </div>
         </div>
+        <!--동영상-->
         <div class="border border-2 border-secondary mb-3 h-32 side_menu">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OdV2GObgquc"></iframe>
+          </div>
         </div>
         <!--달력-->
         <div class="border border-2 border-secondary h-32 side_menu">
@@ -129,17 +126,12 @@
     </div>
   </div>
 
-  <!--비활성화 css/header_footer.css
-  <div id="footer" class="fixed-bottom"></div>-->
-  <!--임시사용 footer-->
+  <!--footer-->
   <div class="bg-dark text-white mt-3">
     <div class="container-fluid py-3">
         <p class="mb-0">숭실대학교 스마트시스템소프트웨어학과<br>(156-743)서울시 동작구 상도로 369 형남공학관 424호 (학과사무실)<br>
         전화: 02-820-0950<br>이메일: smartsystem@soongsil.ac.kr</p>
     </div>
   </div>
-  <script>
-    //htmlInclude();
-  </script>
 </body>
 </html>
