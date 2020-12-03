@@ -1,4 +1,3 @@
-function table(){
 var columnDefs = [
   {headerName: "#", field: "index",sortable:true,filter: true},
     {headerName: "팀 이름", field: "teamName",sortable:true,filter: true},
@@ -8,22 +7,10 @@ var columnDefs = [
     {headerName: "팀장", field: "leaderName",sortable:true,filter: true},
     {headerName: "팀원", field: "description",sortable:true,filter: true}
   ];
-
-      
-  // let the grid know which columns and what data to use
+ 
   var rowData = getTaem();
   console.log(rowData)
-  var gridOptions = {
-    columnDefs: columnDefs,
-  rowData:rowData
-  };
-  console.log(rowData.length)
-  var eGridDiv = document.querySelector('#myGrid');
-  new agGrid.Grid(eGridDiv, gridOptions);
-  // setup the grid after the page has finished loading
-  document.getElementById("total").innerHTML += String(rowData.length);
 
-}
 function getTaem(){
     let data
     $.ajax({
@@ -36,5 +23,34 @@ function getTaem(){
           
         }
     })
+    
     return data;
+}
+var gridOptions = {
+  columnDefs: columnDefs,
+rowData:rowData,
+
+defaultColDef: {
+  resizable: true,
+},
+onGridReady: function (params) {
+  params.api.sizeColumnsToFit();
+
+  window.addEventListener('resize', function () {
+    setTimeout(function () {
+      params.api.sizeColumnsToFit();
+    });
+  });
+},
+};
+document.addEventListener('DOMContentLoaded', function () {
+  var eGridDiv = document.querySelector('#myGrid');
+  new agGrid.Grid(eGridDiv, gridOptions);
+  gridOptions.api.sizeColumnsToFit();
+});
+function getTotal(){
+if(document.getElementById("total")){
+  console.log(rowData)
+document.getElementById("total").innerHTML += String(rowData.length);
+}
 }

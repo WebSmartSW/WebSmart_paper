@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>참가 신청</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/participation.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/part.css">
+  <link rel="stylesheet" href="css/header_footer.css">
+  <link rel=" shortcut icon" href="img/smart.ico">
+  <link rel="icon" href="img/smart.ico">
+</head>
+<body class="m-0" style="overflow-x: hidden">
+
+  <!--header -->
+<div class="jumbotron text-center mb-2 jumbotron-bg" style="background-image: url(img/jumbotron.png);">
+  <a href="index.html" target="_top" class="logo">
+    <img src="img/logo.png" style="width:150px " alt="logo image">
+    <h1>Smart System Software</h1>
+    <p>2020년 스마트경진대회 개최</p>
+  </a>
+</div>
+
+<!-- navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" target="_top">스마트시스템 소프트웨어</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="info.html" target="_top">행사안내</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#" target="_top">참가신청</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="status.html" target="_top">신청현황</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+<!-- body -->
+  <div class="container-fluid text-info">
+    <h2> 참가신청</h2>
+  </div>
+  <div class="container">
+    
+<form id = "apply">
+      <h4 style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">참여학생 인적사항</h4>
+      <div class="form-group">
+        <label for="팀 이름:">팀 이름:</label>
+        <input type="text" class="form-control" name="team" placeholder="작품 제목을 입력하세요" id="teamName">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀장</span>
+        </div>
+        <input type="text" class="form-control" placeholder="팀장 이름" id="leaderName">
+        <input type="text" class="form-control" placeholder="팀장 학번" id="leaderId">
+      </div>
+      
+    <div id = "member"></div>
+      <div id="temp">
+      <div class="input-group mb-3" name ="temp">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀원</span>
+        </div>
+        <input type="text" class="form-control" placeholder="팀원 이름" name="memberName" id=0>
+        <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=0>
+      </div>
+    
+  </div>
+
+      <button type="button" class="btn btn-warning" onclick="addMember()">인원 추가</button>
+
+      <div class="form-group mt-5">
+        <label for="작품 제목:">작품 제목:</label>
+        <input type="text" class="form-control" name="title" placeholder="작품 제목을 입력하세요" id="title">
+      </div>
+
+      <div class="form-group">
+        <label for="작품 개요:">작품 개요:</label>
+        <textarea class="form-control" rows="5" placeholder="200자 이내로 작성하세요." name="description" id="description"></textarea>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-secondary text-white">팀장 연락처</span>
+        </div>
+        <input type="text" class="form-control" placeholder="팀장 핸드폰 번호" name="team_leader_phone" id="phone">
+        <input type="text" class="form-control" placeholder="팀원 이메일" name="team_leader_mail" id="email">
+      </div>
+
+    <input type="submit" class="btn btn-info" onclick="applyForm()" ></input>
+    </form>
+  </div>
+
+  <!--footer-->
+  <div class="bg-dark text-white mt-3">
+    <div class="container-fluid py-3">
+        <p class="mb-0">숭실대학교 스마트시스템소프트웨어학과<br>(156-743)서울시 동작구 상도로 369 형남공학관 424호 (학과사무실)<br>
+        전화: 02-820-0950<br>이메일: smartsystem@soongsil.ac.kr</p>
+    </div>
+  </div>
+
+</body>
+</html>
