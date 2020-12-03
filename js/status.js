@@ -39,11 +39,11 @@ var columnDefs = [
     columnDefs: columnDefs,
   rowData:rowData
   };
-  
+  console.log(rowData.length)
   var eGridDiv = document.querySelector('#myGrid');
   new agGrid.Grid(eGridDiv, gridOptions);
   // setup the grid after the page has finished loading
-
+  document.getElementById("total").innerHTML += String(rowData.length);
 
 }
 function getTaem(){

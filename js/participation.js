@@ -10,6 +10,7 @@ function applyForm(){
    let phone = document.getElementById("phone").value;
    let email = document.getElementById("email").value;
    //console.log(description,title,leaderName,ledaerId,teamName,phone,email)
+   let res;
    $.ajax({
     type: "post",
     url: 'http://localhost:7000/admin/apply',
@@ -18,8 +19,11 @@ function applyForm(){
     data:JSON.stringify({description:description,title:title||null,leaderName:leaderName,leaderId:Number(leaderId),
         teamName:teamName,phone:phone,email:email}),
    success: function(data){
-
+    res = data.length
      console.log(data)
      }
     }) 
+    console.log(res)
+
+
 }
