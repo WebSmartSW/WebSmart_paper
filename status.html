@@ -16,7 +16,8 @@
   <link rel=" shortcut icon" href="img/smart.ico">
   <link rel="icon" href="img/smart.ico">
   <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
-  <script src="js/main.js"></script>
+  
+  <script src="js/status.js"></script>
 </head>
 <body class="m-0" style="overflow-x: hidden">
 
@@ -56,11 +57,21 @@
 <div class="container-fluid text-info" style="min-height: 12vh">
   <h2> 신청현황</h2>
 </div>
-<div class="container">
+<div class="container"   >
 <!-- 총 신청 수 -->
-<h2 style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">총 신청: 2</h2>
+<h2 id="total" style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">총 신청: </h2>
+<script>getTotal()</script>
+</div>
 <!-- 신청현황 표-->
-<div id="myGrid" style="height: 200px; width:1000px;" class="ag-theme-alpine"></div>
+<div class="tableContainer"   >
+<div id="center">
+<div id="myGrid" style="height: 480px; width:1300px;" class="ag-theme-alpine">
+</div>
+  <!-- <script type="text/javascript">
+    table();
+</script> -->
+
+</div>
 </div>
 
 <!--footer-->
