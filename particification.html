@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <script src="js/participation.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/part.css">
@@ -55,26 +55,26 @@
     <h2> 참가신청</h2>
   </div>
   <div class="container">
-    <form action='/create' method='post'>
-
+    
+<form id = "apply">
       <h4 style="font-family: 'Noto Sans KR', sans-serif; text-align:left;">참여학생 인적사항</h4>
       <div class="form-group">
         <label for="팀 이름:">팀 이름:</label>
-        <input type="text" class="form-control" name="team" placeholder="작품 제목을 입력하세요" id="팀이름:">
+        <input type="text" class="form-control" name="team" placeholder="작품 제목을 입력하세요" id="teamName">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text bg-secondary text-white">팀장</span>
         </div>
-        <input type="text" class="form-control" placeholder="팀장 이름" name="team_leader_name">
-        <input type="text" class="form-control" placeholder="팀장 학번" name="team_leader_id">
+        <input type="text" class="form-control" placeholder="팀장 이름" id="leaderName">
+        <input type="text" class="form-control" placeholder="팀장 학번" id="leaderId">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text bg-secondary text-white">팀원</span>
         </div>
-        <input type="text" class="form-control" placeholder="팀원 이름" name="team_0_name">
-        <input type="text" class="form-control" placeholder="팀원 학번" name="team_0_id">
+        <input type="text" class="form-control" placeholder="팀원 이름" name="memberName" id=1>
+        <input type="text" class="form-control" placeholder="팀원 학번" name="memberId" id=1>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -88,23 +88,23 @@
 
       <div class="form-group mt-5">
         <label for="작품 제목:">작품 제목:</label>
-        <input type="text" class="form-control" name="title" placeholder="작품 제목을 입력하세요" id="제목:">
+        <input type="text" class="form-control" name="title" placeholder="작품 제목을 입력하세요" id="title">
       </div>
 
       <div class="form-group">
         <label for="작품 개요:">작품 개요:</label>
-        <textarea class="form-control" rows="5" placeholder="200자 이내로 작성하세요." name="description"></textarea>
+        <textarea class="form-control" rows="5" placeholder="200자 이내로 작성하세요." name="description" id="description"></textarea>
       </div>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text bg-secondary text-white">팀장 연락처</span>
         </div>
-        <input type="text" class="form-control" placeholder="팀장 핸드폰 번호" name="team_leader_phone">
-        <input type="text" class="form-control" placeholder="팀원 이메일" name="team_leader_mail">
+        <input type="text" class="form-control" placeholder="팀장 핸드폰 번호" name="team_leader_phone" id="phone">
+        <input type="text" class="form-control" placeholder="팀원 이메일" name="team_leader_mail" id="email">
       </div>
 
-      <button type="submit" class="btn btn-info">참가신청</button>
+      <input type="button" class="btn btn-info" onclick="applyForm()">참가신청</input>
     </form>
   </div>
 
