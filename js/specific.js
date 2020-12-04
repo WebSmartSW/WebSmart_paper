@@ -2,6 +2,8 @@ let temp = location.href.split("?");
 
 let params = temp[1].split("=")[1];
 let rowData = getTaem();
+let index = rowData.findIndex(v=>v.id==params);
+
    
   
   
@@ -44,11 +46,14 @@ function fetchTeamMates(){
    
     let temp = rowData.map(v=>v.members);
 
-   let members= (JSON.parse(temp[params-1]))
+   let members= (JSON.parse(temp[index]));
+   
    if(members) members.map((member,index)=>teamMates(member,index))
 }
 function fetchData(){
-let data = rowData[params-1]
+ 
+ 
+let data = rowData[index]
 console.log(data.description,document.getElementById("title"))
 document.getElementById("description").value=data.description;
     document.getElementById("title").value=data.title;
