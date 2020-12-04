@@ -26,7 +26,7 @@ git clone https://github.com/WebSmartSW/WebSmart_paper.git
 
 # Features
 
-- 경진대회 개최날짜 확인
+- 경진대회 개최일자 확인
 
 - 경진대회 온라인 신청
 
